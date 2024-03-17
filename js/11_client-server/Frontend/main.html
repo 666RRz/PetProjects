@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/main.css" />
+		<link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon" />
+		<script defer src="./main.js"></script>
+		<title>List of students</title>
+	</head>
+	<body>
+		<div class="form form__wrapper">
+			<button class="form__settings-button btn-reset"></button>
+			<div class="form__settings-div hidden">
+				<a href="" class="form__settings-div-link">
+					<button class="form__settings-buttons btn-reset button-fio">
+						Поиск по ФИО
+					</button>
+				</a>
+				<a href="" class="form__settings-div-link">
+					<button class="form__settings-buttons btn-reset button-faculty">
+						Поиск по названию факультета
+					</button>
+				</a>
+				<a href="" class="form__settings-div-link">
+					<button class="form__settings-buttons btn-reset button-born">
+						Поиск по дате рождения
+					</button>
+				</a>
+				<a href="" class="form__settings-div-link">
+					<button class="form__settings-buttons btn-reset button-start">
+						Поиск по дате начала обучения
+					</button>
+				</a>
+				<a href="" class="form__settings-div-link">
+					<button class="form__settings-buttons btn-reset button-number">
+						Поиск по номеру студента
+					</button>
+				</a>
+			</div>
+			<input
+				type="text"
+				class="form__input form__input-name"
+				placeholder="Найти студента по имени"
+				oninput="capitalizeFirstLetter(this)"
+			/>
+
+			<div class="form__buttons-wrapper">
+				<button class="btn btn-reset form__buttons form__button-sort"></button
+				><button class="btn btn-reset form__buttons form__button-abc"></button>
+				<a class="" href="addStudent.html">
+					<button class="btn-reset form__buttons form__button-add"></button>
+				</a>
+			</div>
+		</div>
+		<form class="hidden finder">
+			<div class="input__groups"></div>
+			<div class="input__groups-faculty"></div>
+			<div class="input__groups-number"></div>
+		</form>
+		<ul class="main-ul" id="mainUl"></ul>
+		<script>
+			function capitalizeFirstLetter(input) {
+				input.value =
+					input.value.charAt(0).toUpperCase() +
+					input.value.slice(1).toLowerCase()
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,476 @@
+@font-face {
+	font-family: 'Comicoro';
+	src: url('../font/ComicoroRu_0.ttf') format('truetype');
+	font-weight: 400;
+}
+
+html,
+body {
+	height: 100%;
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
+
+.btn-reset {
+	padding: 0;
+	border: 0;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.wrap {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container {
+	margin: 0 auto;
+}
+
+.game__wrapper {
+	padding-top: 8%;
+	display: grid;
+	grid-template-areas:
+		'top1 top2'
+		'bottom1 bottom2';
+	position: relative;
+	grid-template-columns: repeat(1, 1fr);
+}
+
+.list__button {
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	transform: rotateY(180deg) translateZ(1px);
+	font-size: 80px;
+}
+
+.game__button {
+	max-width: 300px;
+	max-height: 60px;
+	font-family: 'Nunito', sans-serif;
+	font-size: 22px;
+	text-transform: uppercase;
+	letter-spacing: 1.3px;
+	font-weight: 700;
+	color: #000;
+	background: #cceb46;
+	background: linear-gradient(
+		90deg,
+		rgb(182, 217, 28) 0%,
+		rgb(227, 242, 157) 100%
+	);
+	border: none;
+	border-radius: 1000px;
+	box-shadow: 12px 12px 24px rgba(67, 69, 59, 0.64);
+	transition: all 0.3s ease-in-out 0s;
+	cursor: pointer;
+	outline: none;
+	position: fixed;
+	padding: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	top: 5%;
+	right: 43%;
+}
+
+.game__button-reset {
+	max-width: 300px;
+	max-height: 60px;
+	font-family: 'Nunito', sans-serif;
+	font-size: 22px;
+	text-transform: uppercase;
+	letter-spacing: 1.3px;
+	font-weight: 700;
+	color: #000;
+	background: #cceb46;
+	background: linear-gradient(
+		90deg,
+		rgb(182, 217, 28) 0%,
+		rgb(227, 242, 157) 100%
+	);
+	border: none;
+	border-radius: 1000px;
+	box-shadow: 12px 12px 24px rgba(67, 69, 59, 0.64);
+	transition: all 0.3s ease-in-out 0s;
+	cursor: pointer;
+	outline: none;
+	position: fixed;
+	padding: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	bottom: 5%;
+	right: 43%;
+}
+
+.game__button-reset::before {
+	content: '';
+	border-radius: 1000px;
+	min-width: 100%;
+	min-height: 100%;
+	/* outline: 6px solid #d4c2ab; */
+	outline-offset: 2px;
+	box-shadow: 12px 12px 24px rgba(40, 44, 44, 0.64);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 0;
+	transition: all 0.3s ease-in-out 0s;
+}
+
+.game__button-reset:hover::before {
+	opacity: 1;
+}
+
+.game__button::before {
+	content: '';
+	border-radius: 1000px;
+	min-width: 209px;
+	min-height: 45px;
+	/* border: 6px solid #555; */
+	/* box-shadow: 12px 12px 24px rgba(40, 44, 44, 0.64); */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 0;
+	transition: all 0.3s ease-in-out 0s;
+}
+
+.game__button:hover,
+.game__button:focus {
+	color: #313133;
+	transform: translateY(-6px);
+}
+
+.game__button:hover::before,
+.game__button:focus::before {
+	opacity: 1;
+}
+
+.game__ul {
+	display: grid;
+	grid-template-areas:
+		'top1 top2'
+		'bottom1 bottom2';
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	margin: 0 auto;
+	gap: 30px;
+	padding-right: 2%;
+}
+
+.game__ul-grid-columns {
+	grid-template-columns: repeat(4, minmax(200px, 1fr));
+}
+
+.game__list {
+	border: 1px solid #f4f4f4;
+	min-width: 240px;
+	border-radius: 20px;
+	background-image: url(../img/card.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-size: 65%;
+	background-position: center -10%;
+	min-height: 250px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	background-color: #313133;
+	transition: transform 1.5s;
+}
+
+.front {
+	background-image: url(../img/card.png);
+}
+
+.back {
+	transform: rotateY(180deg) translateZ(1px);
+	background-image: none;
+}
+
+.game__list:nth-child(1) {
+	grid-area: top1;
+}
+
+.game__list:nth-child(2) {
+	grid-area: top2;
+}
+
+.game__list:nth-child(3) {
+	grid-area: bottom1;
+}
+
+.game__list:nth-child(4) {
+	grid-area: bottom2;
+}
+
+.bg-ex-animation {
+	background: url(../img/white-fon\(proba\).png);
+	background-position: 0 0;
+	background-repeat: repeat;
+	/* animation: animated-bg 200s linear infinite; */
+	width: 100%;
+	height: 100%;
+}
+@keyframes animated-bg {
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: 0 1000px;
+	}
+}
+
+.night {
+	min-width: 60px;
+	min-height: 60px;
+	padding: 10px;
+	display: flex;
+	position: fixed;
+	right: 5%;
+	top: 2%;
+	border-radius: 1000px;
+	background-image: url(../img/lampa-off.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: #fff;
+	transition: background-color 0.3s, background-image 0.3s;
+}
+.night:hover {
+	background-image: url(../img/lampa-on.png);
+}
+
+.joker {
+	position: fixed;
+	left: 3%;
+	top: 85%;
+	min-width: 60px;
+	min-height: 60px;
+	background-image: url(../img/joker-off.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	transition: background-image 0.3s;
+}
+
+.joker:hover {
+	background-image: url(../img/joker-on.png);
+}
+
+.game__card-add {
+	position: fixed;
+	left: 7%;
+	top: 5%;
+	min-width: 40px;
+	min-height: 40px;
+	background-image: url(../img/plus-back.png);
+	background-size: cover;
+	background-position: center center;
+	cursor: not-allowed;
+	opacity: 0.5;
+}
+
+.game__card-remove {
+	position: fixed;
+	left: 3%;
+	top: 5%;
+	min-width: 40px;
+	min-height: 40px;
+	background-image: url(../img/minus-back.png);
+	background-size: cover;
+	background-position: center center;
+	cursor: not-allowed;
+	opacity: 0.5;
+}
+.game__card-prop {
+	opacity: 1;
+	cursor: pointer;
+}
+
+.game__start-button {
+	position: fixed;
+	left: 46%;
+	top: 44%;
+	display: block;
+	margin: 0 auto;
+	text-wrap: nowrap;
+	min-width: 100px;
+	min-height: 80px;
+	background-color: #cceb46;
+}
+
+.game-back {
+	background-image: url(../img/game-back.avif);
+}
+
+.game {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.game__start-button {
+	min-width: 300px;
+	min-height: 60px;
+	font-family: 'Nunito', sans-serif;
+	font-size: 22px;
+	text-transform: uppercase;
+	letter-spacing: 1.3px;
+	font-weight: 700;
+	color: #313133;
+	background: #4fd1c5;
+	background: linear-gradient(
+		90deg,
+		rgba(129, 230, 217, 1) 0%,
+		rgba(79, 209, 197, 1) 100%
+	);
+	border: none;
+	border-radius: 1000px;
+	box-shadow: 12px 12px 24px rgba(79, 209, 197, 0.64);
+	transition: all 0.3s ease-in-out 0s;
+	cursor: pointer;
+	outline: none;
+	position: fixed;
+	left: 40%;
+	top: 46%;
+	padding: 10px;
+}
+
+.game__start-button::before {
+	content: '';
+	border-radius: 1000px;
+	min-width: calc(300px + 12px);
+	min-height: calc(60px + 12px);
+	border: 6px solid #00ffcb;
+	box-shadow: 0 0 60px rgba(0, 255, 203, 0.64);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 0;
+	transition: all 0.3s ease-in-out 0s;
+}
+
+.game__start-button:hover,
+.game__start-button:focus {
+	color: #313133;
+	transform: translateY(-6px);
+}
+
+.game__start-button:hover::before,
+.game__start-button:focus::before {
+	opacity: 1;
+}
+
+.game__start-button::after {
+	content: '';
+	width: 30px;
+	height: 30px;
+	border-radius: 100%;
+	border: 6px solid #00ffcb;
+	position: absolute;
+	z-index: -1;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	animation: ring 1.5s infinite;
+}
+
+.game__start-button:hover::after,
+.game__start-button:focus::after {
+	animation: none;
+	display: none;
+}
+
+@keyframes ring {
+	0% {
+		width: 30px;
+		height: 30px;
+		opacity: 1;
+	}
+	100% {
+		width: 300px;
+		height: 300px;
+		opacity: 0;
+	}
+}
+
+.open {
+	display: block;
+}
+
+.modal__wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+	z-index: 999;
+}
+
+.modal__window {
+	background-color: #000;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+	border: 2px solid #fff;
+	font-family: 'Comicoro';
+}
+
+.modal__h1 {
+	font-size: 60px;
+	line-height: 1.2;
+}
+
+.modal__p {
+	font-size: 30px;
+}
+
+.modal__button {
+	font-family: 'Comicoro';
+	background-color: #8c8c8c;
+	color: #fff;
+	border: none;
+	padding: 10px 20px;
+	font-size: 30px;
+	cursor: pointer;
+	margin-right: 10px;
+}
+
+.modal__button-close {
+	font-family: 'Comicoro';
+	background-color: #8c8c8c;
+	color: #fff;
+	border: none;
+	padding: 10px 20px;
+	font-size: 30px;
+	cursor: pointer;
+}
+
+.modal__button-close:hover {
+	background-color: #444;
+}
+
+.modal__button:hover {
+	background-color: #444;
+}
+
+.hidden {
+	display: none;
+}
+
+.clear {
+	transform: rotateY(180deg) translateZ(1px);
+	background-color: rgb(116, 241, 116);
+	background-image: none;
+}

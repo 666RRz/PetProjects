@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/main.css" />
+		<link rel="stylesheet" href="./css/addStudent.css" />
+		<script defer src="./addNewStudent.js"></script>
+
+		<link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon" />
+		<title>Add student</title>
+	</head>
+	<body>
+		<div class="main-container">
+			<header class="container header">
+				<a href="main.html" class="header__link">
+					<button class="header__button"></button>
+				</a>
+			</header>
+			<div class="container list__wrapper">
+				<form class="list__form form">
+					<input
+						id="input-name"
+						minlength="2"
+						type="text"
+						class="form__input span-block"
+						required
+						placeholder="Имя"
+						pattern="[А-Яа-яЁё ]+"
+						title="Только символы кириллицы"
+						oninput="capitalizeFirstLetter(this)"
+					/>
+					<span class="form__input-span hidden" id="span-1"
+						>Только кириллица*</span
+					>
+					<input
+						id="input-surname"
+						type="text"
+						class="form__input span-block"
+						required
+						placeholder="Фамилия"
+						pattern="[А-Яа-яЁё ]+"
+						title="Только символы кириллицы"
+						minlength="2"
+						oninput="capitalizeFirstLetter(this)"
+					/>
+					<span class="form__input-span hidden" id="span-2">Тут тоже*</span>
+
+					<input
+						id="input-lastname"
+						minlength="2"
+						type="text"
+						class="form__input span-block"
+						required
+						placeholder="Отчество"
+						pattern="[А-Яа-яЁё ]+"
+						title="Только символы кириллицы"
+						oninput="capitalizeFirstLetter(this)"
+					/>
+					<span class="form__input-span hidden" id="span-3"
+						>И тут кириллица...</span
+					>
+					<input
+						required
+						type="date"
+						class="form__input span-block"
+						min="1900-01-01"
+						max="2024-02-25"
+						placeholder="Дата рождения"
+						style="padding-left: 10px; padding-right: 10px"
+						id="input-date"
+					/>
+					<select
+						required
+						class="form__input span-block"
+						name="Gender"
+						id="input-gender"
+					>
+						<option hidden selected disabled value="Не выбран">
+							Выберите Пол
+						</option>
+						<option value="Мужской">Мужской</option>
+						<option value="Женский">Женский</option>
+					</select>
+
+					<input
+						maxlength="4"
+						id="input-start"
+						required
+						type="number"
+						min="2000"
+						max="new Date()"
+						class="form__input span-block"
+						placeholder="Начало обучения (год)"
+					/>
+					<span class="form__input-span hidden" id="span-5"
+						>Не ранее 2000 года и не позднее текущего*</span
+					>
+
+					<input
+						id="input-end"
+						required
+						type="number"
+						min="2000"
+						class="form__input span-block"
+						placeholder="Год окончания"
+					/>
+
+					<input
+						id="input-faculty"
+						required
+						type="text"
+						class="form__input span-block"
+						placeholder="Название факультета"
+						oninput="capitalizeFirstLetter(this)"
+					/>
+					<span class="form__input-span hidden" id="span-7"
+						>Например: Историко - филологический*</span
+					>
+					<input
+						id="input-about"
+						type="text"
+						class="form__input form__input-about"
+						placeholder="Пару слов о себе"
+						pattern="[А-Яа-яЁё,. ]+"
+						oninput="capitalizeFirstLetter(this)"
+					/>
+
+					<button tabindex="-10000" class="btn btn-reset form__button-save">
+						Добавить нового студента
+					</button>
+				</form>
+
+				<ul class="list__ul ul hidden"></ul>
+			</div>
+		</div>
+		<script>
+			function capitalizeFirstLetter(input) {
+				input.value =
+					input.value.charAt(0).toUpperCase() +
+					input.value.slice(1).toLowerCase()
+			}
+		</script>
+	</body>
+</html>

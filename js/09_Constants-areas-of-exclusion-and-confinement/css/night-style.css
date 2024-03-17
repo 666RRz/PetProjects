@@ -1,0 +1,67 @@
+.bg-ex-animation {
+	background: url(../img/fon-black.png);
+}
+
+.game__button {
+	color: #313133;
+	background: #555;
+	background: linear-gradient(
+		90deg,
+		rgb(158, 181, 178) 0%,
+		rgb(56, 65, 65) 100%
+	);
+	box-shadow: 12px 12px 24px rgba(40, 44, 44, 0.64);
+}
+
+.game__button-reset {
+	color: #313133;
+	background: #555;
+	background: linear-gradient(
+		90deg,
+		rgb(158, 181, 178) 0%,
+		rgb(56, 65, 65) 100%
+	);
+	box-shadow: 12px 12px 24px rgba(40, 44, 44, 0.64);
+}
+
+.game__button::before {
+	box-shadow: 10px 12px 24px rgba(149, 200, 200, 1);
+}
+
+.game__button-reset::before {
+	box-shadow: 12px 12px 24px rgba(149, 200, 200, 0.64);
+}
+
+.game__list {
+	border: 1px solid #807c7c;
+	background-image: url(../img/card-dark.jpeg);
+	background-size: cover;
+	background-position: center 0px;
+	background-repeat: repeat;
+}
+
+.back {
+	transform: rotateY(180deg) translateZ(1px);
+	background-image: none;
+}
+
+.night {
+	background-image: url(../img/lampa-on.png);
+}
+.night:hover {
+	background-image: url(../img/lampa-off.png);
+}
+
+.joker {
+	background-image: url(../img/joker-on.png);
+}
+
+.joker:hover {
+	background-image: url(../img/joker-off.png);
+}
+
+.clear {
+	transform: rotateY(180deg) translateZ(1px);
+	background-color: rgb(116, 241, 116);
+	background-image: none;
+}

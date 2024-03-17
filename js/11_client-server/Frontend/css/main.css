@@ -1,0 +1,371 @@
+@font-face {
+	font-family: 'Play';
+	src: url(../fonts/Play/Play-Regular.ttf) format(ttf);
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'Play';
+	src: url(../fonts/Play/Play-Bold.ttf) format(ttf);
+	font-weight: 700;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+	-moz-text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+	margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+	list-style: none;
+}
+
+/* Set core body defaults */
+body {
+	font-family: 'Play', sans-serif;
+	min-height: 100vh;
+	line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+	line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+	text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+	color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+	max-width: 100%;
+	display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* Make sure textarea without a rows attribute are not tiny */
+textarea:not([rows]) {
+	min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+	scroll-margin-block: 5ex;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	list-style: none;
+}
+
+body {
+	padding-left: 50px;
+	background-image: url(../img/back.avif);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.a-reset {
+	text-decoration: none;
+	color: inherit;
+}
+
+.finder {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	margin-bottom: 50px;
+	margin-left: 70px;
+}
+
+.btn-reset {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: 0;
+}
+
+.flex {
+	display: flex;
+}
+
+.container {
+	max-width: 1770px;
+	padding-left: 50px;
+}
+
+.form__wrapper {
+	position: relative;
+	display: flex;
+	margin-top: 50px;
+	margin-bottom: 100px;
+}
+
+.form__input {
+	margin-left: 30px;
+	width: 90%;
+	border: 0;
+	border-radius: 40px;
+	padding: 10px;
+	margin-right: 40px;
+	transition: background-color 1.5s;
+}
+
+.form__input:focus {
+	background-color: yellow;
+}
+
+.form__buttons-wrapper {
+	width: 40%;
+	display: flex;
+	gap: 40px;
+}
+
+.form__buttons {
+	min-width: 40px;
+	min-height: 20px;
+	border: 0;
+	background: none;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	transition: 0.3s;
+}
+
+.form__buttons:hover {
+	outline: 3px solid rebeccapurple;
+	transform: translateY(-5px);
+	outline-offset: 5px;
+	border-radius: 10px;
+}
+
+.form__button-add {
+	width: 100%;
+	height: 100%;
+	border: 0;
+	background-image: url(../img/plus.png), url(../img/student.png);
+	background-position: left bottom, center center;
+	background-size: 22px, 40px;
+}
+
+.form__buttons:hover {
+	cursor: pointer;
+}
+
+.form__button-sort {
+	background-image: url(../img/sort-png.png);
+}
+
+.form__button-abc {
+	background-image: url(../img/sort-alp.png);
+}
+
+.ul {
+	gap: 40px;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	padding-bottom: 40px;
+}
+
+.list {
+	min-width: 500px;
+	min-height: 250px;
+	flex-direction: column;
+	outline: 2px solid yellow;
+	background-image: url(../img/back-list.jpeg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Adding shadow to the text */
+	transition: transform 0.5s;
+}
+
+.list:hover {
+	cursor: pointer;
+	transform: translateY(-10px);
+}
+
+.list__photo-man {
+	min-height: 100px;
+	background-image: url(../img/student.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center center;
+	border-bottom: 1px solid yellow;
+}
+
+.list__photo-wom {
+	min-height: 100px;
+	background-image: url(../img/student-wom.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center center;
+	border-bottom: 1px solid yellow;
+}
+
+.list__bottom {
+	padding: 15px;
+	flex-direction: column;
+	gap: 10px;
+	word-wrap: break-word;
+	color: black;
+	font-size: 16px;
+	font-weight: 700;
+	text-transform: capitalize;
+	align-items: flex-start;
+}
+
+.form__settings-button {
+	min-width: 40px;
+	min-height: 20px;
+	background-image: url(../img/menu-button.png);
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	transition: 0.5s;
+}
+
+.form__settings-button:focus {
+	transform: rotateZ(90deg);
+}
+
+.form__settings-button:hover {
+	cursor: pointer;
+}
+
+.form__settings-div {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	gap: 15px;
+	top: 60px;
+	left: 10px;
+	padding: 20px;
+	background-color: #fff;
+	outline: 3px solid #000;
+	border-radius: 40px;
+}
+
+.form__settings-buttons:hover {
+	cursor: pointer;
+}
+
+.input__groups {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.button__inputs {
+	border-radius: 40px;
+	padding: 10px;
+	transition: background-color 1.5s;
+	min-width: 300px;
+}
+
+.button__inputs:focus {
+	background-color: yellow;
+}
+
+.input__groups-faculty {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.finder__button {
+	min-width: 100px;
+	max-height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 15px;
+	color: #000;
+	background-color: yellow;
+	outline: 2px solid #000;
+	border-radius: 15px;
+	font-weight: 700;
+}
+
+.finder__button:hover {
+	cursor: pointer;
+	opacity: 0.8;
+}
+
+.form__search-button {
+	min-width: 100px;
+	max-height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 15px;
+	color: #000;
+	background-color: yellow;
+	outline: 2px solid #000;
+	border-radius: 15px;
+	font-weight: 700;
+	margin-right: 25px;
+}
+
+.form__search-button:hover {
+	cursor: pointer;
+	opacity: 0.8;
+}
+
+.hidden {
+	display: none;
+}
+
+.list__link:hover {
+	cursor: pointer;
+}

@@ -1,0 +1,42 @@
+.button {
+  border-radius: 10px;
+  color: white;
+  transition: 0.2s linear;
+  background: #0b63f6;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+.button:hover {
+  -webkit-transform: rotateZ(5deg);
+  -ms-transform: rotateZ(5deg);
+  transform: rotateZ(5deg);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.display-none {
+  display: none;
+}
+
+li {
+  margin-bottom: 10px;
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-top: 0;
+}
+
+span {
+  font-size: 18px;
+  font-weight: bold;
+  color: #7f7f7f;
+}

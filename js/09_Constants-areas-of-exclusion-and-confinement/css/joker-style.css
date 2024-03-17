@@ -1,0 +1,47 @@
+.bg-ex-animation {
+	background: url(../img/fon-joker2.jpeg);
+	background-position: center center;
+	background-size: 10%;
+	background-repeat: repeat;
+	animation: animated-bg 60s linear infinite;
+}
+
+.game__list {
+	background-image: url(../img/card-joker.jpeg);
+	background-size: cover;
+	background-position: center -35px;
+	background-repeat: repeat;
+}
+
+.list__button {
+	color: #fff;
+}
+
+.back {
+	transform: rotateY(180deg) translateZ(1px);
+	background-image: none;
+	background: none;
+	border: 0;
+	outline: 6px solid red;
+}
+
+.night {
+	background-image: url(../img/lampa-on.png);
+}
+.night:hover {
+	background-image: url(../img/lampa-off.png);
+}
+
+.joker {
+	background-image: url(../img/joker-on.png);
+}
+
+.joker:hover {
+	background-image: url(../img/joker-off.png);
+}
+
+.clear {
+	transform: rotateY(180deg) translateZ(1px);
+	background-color: rgb(116, 241, 116);
+	background-image: none;
+}

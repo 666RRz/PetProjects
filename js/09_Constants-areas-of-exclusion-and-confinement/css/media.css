@@ -1,0 +1,18 @@
+@media (min-width: 1920px) {
+	.game__button {
+		right: 44%;
+	}
+
+	.game__ul {
+		padding-right: 0;
+	}
+
+	.game__button-reset {
+		right: 44%;
+		bottom: 4%;
+	}
+
+	.game__wrapper {
+		padding-top: 7%;
+	}
+}

@@ -1,0 +1,268 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+	-moz-text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+	margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+	list-style: none;
+}
+
+/* Set core body defaults */
+body {
+	min-height: 100vh;
+	line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+	line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+	text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+	color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+	max-width: 100%;
+	display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* Make sure textarea without a rows attribute are not tiny */
+textarea:not([rows]) {
+	min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+	scroll-margin-block: 5ex;
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+}
+
+.form {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.form__input {
+	min-width: 400px;
+	min-height: 40px;
+	border-radius: 40px;
+	padding-left: 10px;
+	border: 0;
+	transition: background-color 1.5s;
+}
+
+.form__input:focus {
+	background-color: yellow;
+}
+
+input:focus + span {
+	display: block;
+	animation: scale 2s forwards;
+}
+
+@keyframes scale {
+	from {
+		transform: scale(0);
+	}
+	to {
+		transform: scale(100%);
+	}
+}
+
+.form__buttons {
+	min-width: 60px;
+	min-height: 40px;
+}
+
+.form__button-save {
+	margin-top: 20px;
+	padding: 10px;
+	padding-right: 45px;
+	background: none;
+	color: #fff;
+	border: 0;
+	font-size: 20px;
+	font-weight: 700;
+	background-image: url(../img/save-icon.png);
+	background-repeat: no-repeat;
+	background-position: right center;
+	background-size: 40px;
+	transition: color 1.5s;
+}
+
+.form__button-save:hover {
+	cursor: pointer;
+	color: yellow;
+}
+
+#date-input {
+	content: '';
+}
+
+.header {
+	display: flex;
+	margin-bottom: 60px;
+}
+
+.main-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.header__button {
+	min-width: 40px;
+	min-height: 30px;
+	border: 0;
+	background: none;
+	background-image: url(../img/strelka.png);
+	background-size: cover;
+	background-position: center center;
+	transition: 0.3s;
+}
+
+.header__button:hover {
+	cursor: pointer;
+	transform: translateX(-5px);
+}
+
+.input-valid {
+	background-color: yellowgreen;
+}
+
+.ul {
+	margin-bottom: 15px;
+}
+
+.ul__buttons-div {
+	justify-content: space-between;
+}
+
+.ul__button-add {
+	color: #fff;
+	background-color: green;
+	padding: 10px;
+	transition: 0.3s;
+	font-weight: 700;
+}
+
+.ul__button-add:hover {
+	cursor: pointer;
+	opacity: 0.8;
+}
+
+.ul__button-del {
+	color: #fff;
+	background-color: red;
+	padding: 10px;
+	transition: 0.3s;
+	font-weight: 700;
+}
+
+.ul__button-del:hover {
+	cursor: pointer;
+	opacity: 0.8;
+}
+
+.green {
+	background-color: rgb(111, 194, 111);
+}
+
+.red {
+	background-color: rgb(211, 117, 117);
+}
+
+::placeholder {
+	font-weight: 700;
+	color: #000;
+}
+
+.form__input-span {
+	padding: 10px;
+	left: 10px;
+	background-color: inherit;
+	outline: 3px solid #fff;
+	border-radius: 40px;
+	color: #fff;
+	font-weight: 400;
+}
+
+#input-about {
+	display: flex;
+	text-wrap: wrap;
+	max-width: 450px;
+	border-radius: 20px;
+	min-height: 90px;
+}
+
+.list {
+	transition: none;
+}
+
+.list:hover {
+	cursor: default;
+	transform: none;
+}
