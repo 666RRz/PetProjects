@@ -275,7 +275,7 @@ p {
 .advertising__wrapper {
   border-radius: 32px;
   background-repeat: no-repeat;
-  background-image: url(/img/advert-img.jpg);
+  background-image: url(../img/advert-img.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 620px;
@@ -346,7 +346,7 @@ p {
   margin-right: 25px;
   width: 50%;
   align-items: flex-end;
-  background-image: url(/img/about-us__left.jpg);
+  background-image: url(../img/about-us__left.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -421,7 +421,7 @@ p {
 }
 
 .right-block1 {
-  background-image: url(/img/1/block1-left1024.png);
+  background-image: url(../img/1/block1-left1024.png);
   background-repeat: no-repeat;
   background-position: 60px center;
   outline: 1px solid #cacaca;
@@ -452,7 +452,7 @@ p {
 }
 
 .right-block2 {
-  background-image: url(/img/1/block2-left1024.png);
+  background-image: url(../img/1/block2-left1024.png);
   background-repeat: no-repeat;
   background-position: 60px center;
   outline: 1px solid #cacaca;
@@ -939,7 +939,7 @@ p {
   top: 50%;
   width: 15px;
   height: 15px;
-  background-image: url(/img/footer-checkbox.svg);
+  background-image: url(../img/footer-checkbox.svg);
   transform: translateY(-50%);
   background-position: center;
   background-size: 100%;

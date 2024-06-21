@@ -45,7 +45,6 @@ ul {
 }
 
 .container {
-  max-width: 1140px;
   margin: 0 auto;
 }
 
@@ -149,19 +148,14 @@ a:hover {
 /* benefits */
 
 .benefits__top-inside {
-  padding-left: 147px;
+  padding-left: 155px;
   justify-content: center;
   align-items: center;
   background-image: url(../img/benefits_main.png);
   background-repeat: no-repeat;
-  background-position: left 22px;
+  background-position: 15px  22px;
 }
 
-.benefits__wrapper {
-  flex-direction: column;
-  padding-top: 80px;
-  padding-bottom: 80px;
-}
 
 .benefits__top-content {
   flex-direction: column;
@@ -186,7 +180,10 @@ a:hover {
 }
 
 .benefits__container {
+  padding-top: 80px;
+  padding-bottom: 80px;
   justify-content: center;
+  flex-direction: column;
 }
 
 .benefits__top {
@@ -202,7 +199,7 @@ a:hover {
   align-items: center;
   min-height: 80px;
   background-repeat: no-repeat;
-  background-position: left center;
+  background-position: left 15px center;
 }
 
 .benefits__ul-list-p {
@@ -215,7 +212,6 @@ a:hover {
 
 .list-1 {
   background-image: url(../img/list-1.svg);
-  padding-right: 0;
 }
 
 .list-2 {
@@ -247,19 +243,15 @@ a:hover {
 }
 
 .teacher__img {
-  border-radius: 22px;
+  border-top-left-radius: 22px;
+  border-top-right-radius: 22px;
   max-width: 255px;
   min-height: 180px;
 }
 
-.hide {
-  display: none;
-}
-
 .teacher__list-content {
   border-radius: 25px;
-  padding-top: 30px;
-  padding-top: 210px;
+  padding-top: 26px;
   background-repeat: no-repeat;
   background-position: top center;
   background-size: contain;
@@ -281,7 +273,7 @@ a:hover {
   color: #85859b;
 }
 
-.teacher-1 {
+/* .teacher-1 {
   background-image: url(../img/teacher-1.jpg);
 }
 
@@ -295,7 +287,7 @@ a:hover {
 
 .teacher-4 {
   background-image: url(../img/teacher-4.jpg);
-}
+} */
 
 /* courses */
 
@@ -396,6 +388,10 @@ a:hover {
   background-position: center top;
 }
 
+.courses_hide {
+  display: none;
+}
+
 /* footer */
 
 .footer {
@@ -405,7 +401,7 @@ a:hover {
 
 .footer__ul {
   padding-top: 28px;
-  padding-bottom: 28px;
+  padding-bottom: 24px;
   gap: 30px;
   justify-content: center;
 }

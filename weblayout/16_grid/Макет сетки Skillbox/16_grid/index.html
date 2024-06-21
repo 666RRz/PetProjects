@@ -13,8 +13,8 @@
   </head>
   <body>
     <header class="header">
-      <div class="container header__container row">
-        <div class="col-lg-12 col-md-12 header__section flex">
+      <div class="container header__container">
+        <div class="header__section flex">
           <a href="#" class="header__logo">
             <picture>
               <source srcset="img/logo.svg" />
@@ -26,7 +26,7 @@
               <li class="nav__list header__list">
                 <a href="#hero" class="header__list-link"> Главная </a>
               </li>
-              <li class="nav__list header__list">
+              <li class="nav__list header__list header__list-about">
                 <a href="#benefits" class="header__list-link"> О нас </a>
               </li>
               <li class="nav__list header__list">
@@ -44,7 +44,7 @@
       <section id="hero" class="hero">
         <div class="container hero__container">
           <div class="hero__wrapper">
-            <div class="hero__content col-md-6 col-sm col-xl-6">
+            <div class="hero__content col-xl-6 col-md-6 col-sm col-12">
               <h1 class="hero__content-h1">Курсы 3D моделирования</h1>
               <p class="hero__content-p">
                 Следует отметить, что существующая теория способствует повышению
@@ -59,10 +59,9 @@
         </div>
       </section>
       <section id="benefits" class="benefits">
-        <div class="container benefits__container flex">
-          <div class="benefits__wrapper flex">
+        <div class="container benefits__container">
             <div class="benefits__top row">
-              <div class="benefits__top-inside col-xl-9 col-md col-sm-11 flex">
+              <div class="benefits__top-inside col-xl-9 col-md col-sm-11 col-12 flex">
                 <div class="benefits__top-content flex">
                   <h2 class="benefits__h2">
                     Преимущества обучения в&nbsp;skillbox
@@ -97,7 +96,6 @@
               </li>
             </ul>
           </div>
-        </div>
       </section>
       <section id="teacher" class="teacher">
         <div class="container teacher__container">
@@ -105,11 +103,12 @@
           <ul class="row teacher__ul">
             <li class="col-xl-3 col-lg-3 col-md-6 col-sm-6 teacher__list">
               <picture class="hide">
-                <source srcset="img/teacher-1-576-jpg.jpeg" (max-width: 767px) />
-                <source srcset="img/teacher-1-768-jpg.jpeg" (max-width: 768px) />
+                <source srcset="img/teacher-1-mob.jpeg" media="(max-width: 320px)" />
+                <source srcset="img/teacher-1-576-jpg.jpeg" media="(max-width: 576px)" />
+                <source srcset="img/teacher-1-768-jpg.jpeg" media="(max-width: 768px)" />
                 <img
                   class="teacher__img"
-                  src="/img/teacher1-svg.svg"
+                  src="img/teacher1-jpg.jpeg"
                   alt="teacher-picture"
                 />
               </picture>
@@ -124,11 +123,12 @@
             </li>
             <li class="col-xl-3 col-lg-3 col-md-6 col-sm-6 teacher__list">
               <picture class="hide">
-                <source srcset="img/teacher-2-576-jpg.jpeg" (max-width: 767px) />
-                <source srcset="img/teacher-2-768-jpg.jpeg" (max-width: 768px) />
+                <source srcset="img/teacher-2-mob.jpeg" media="(max-width: 320px)" />
+                <source srcset="img/teacher-2-576-jpg.jpeg" media="(max-width: 576px)" />
+                <source srcset="img/teacher-2-768-jpg.jpeg" media="(max-width: 768px)" />
                 <img
                   class="teacher__img"
-                  src="/img/teacher2-svg.svg"
+                  src="img/teacher2-jpg.jpeg"
                   alt="teacher-picture"
                 />
               </picture>
@@ -142,11 +142,12 @@
             </li>
             <li class="col-xl-3 col-lg-3 col-md-6 col-sm-6 teacher__list">
               <picture class="hide">
-                <source srcset="img/teacher-3-576-jpg.jpeg" (max-width: 767px) />
-                <source srcset="img/teacher-3-768-jpg.jpeg" (max-width: 768px) />
+                <source srcset="img/teacher-3-mob.jpeg" media="(max-width: 320px)" />
+                <source srcset="img/teacher-3-576-jpg.jpeg" media="(max-width: 576px)" />
+                <source srcset="img/teacher-3-768-jpg.jpeg" media="(max-width: 768px)" />
                 <img
                   class="teacher__img"
-                  src="/img/teacher3-svg.svg"
+                  src="img/teacher3-jpg.jpeg"
                   alt="teacher-picture"
                 />
               </picture>
@@ -160,11 +161,12 @@
             </li>
             <li class="col-xl-3 col-lg-3 col-md-6 col-sm-6 teacher__list">
               <picture class="hide">
-                <source srcset="img/teacher-4-576-jpg.jpeg" (max-width: 767px) />
-                <source srcset="img/teacher-4-768-jpg.jpeg" (max-width: 768px) />
+                <source srcset="img/teacher-4-mob.jpeg" media="(max-width: 320px)" />
+                <source srcset="img/teacher-4-576-jpg.jpeg" media="(max-width: 576px)" />
+                <source srcset="img/teacher-4-768-jpg.jpeg" media="(max-width: 768px)" />
                 <img
                   class="teacher__img"
-                  src="/img/teacher4-svg.svg"
+                  src="img/teacher4-jpg.jpeg"
                   alt="teacher-picture"
                 />
               </picture>
@@ -298,6 +300,9 @@
                 </svg>
                 <h3 class="courses__list-h3 courses__list-h3-3">
                   Визуализация в 3ds Max
+                </h3>
+                <h3 class="courses_hide">
+                  Визуализация в <br> 3ds Max
                 </h3>
                 <p class="courses__list-p">
                   Повседневная практика показывает, что сложившаяся структура
