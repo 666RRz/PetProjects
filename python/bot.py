@@ -5,7 +5,7 @@ import json
 import requests
 
 
-token = "vk1.a.4PNeGlEKgaS5f-lK1W7rZQ9QxfNQMK1RLmJYihRL_CvUzSJy71SaCfNnTl3k_ikPnylLUa1FiVsB74bZQHN-WnVAr5KZP4YQ0tg7Wpfh5OoX5MlPJMxb-2Z95efBQ-0gqCxIF0ffosMFsFaq6dMI14t4IK9V7TRmndTkhHqRA1u22HAFaCkINVIE123Rn0j_Qg4jqSNpshSY7Kk9TaxTgA"
+token = ""
 
 
 bh = vk_api.VkApi(token=token)
