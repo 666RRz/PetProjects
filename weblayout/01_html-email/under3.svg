@@ -1,0 +1,16 @@
+<svg width="36.000000" height="36.000000" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip611_763">
+			<rect id="Component 1/arrow-up-circle" width="36.000000" height="36.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<rect id="Component 1/arrow-up-circle" width="36.000000" height="36.000000" fill="#FFFFFF" fill-opacity="0"/>
+	<g clip-path="url(#clip611_763)">
+		<path id="Vector" d="M18 33C9.71 33 3 26.28 3 18C3 9.71 9.71 3 18 3C26.28 3 33 9.71 33 18C33 26.28 26.28 33 18 33Z" stroke="#9D5CD0" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round"/>
+		<path id="Vector" d="M24 18L18 12L12 18" stroke="#000000" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
+		<path id="Vector" d="M18 24L18 12" stroke="#000000" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
+	</g>
+</svg>

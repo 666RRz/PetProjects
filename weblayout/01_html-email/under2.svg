@@ -1,0 +1,17 @@
+<svg width="36.000000" height="36.000000" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip611_756">
+			<rect id="Component 1/calendar" width="36.000000" height="36.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<rect id="Component 1/calendar" width="36.000000" height="36.000000" fill="#FFFFFF" fill-opacity="0"/>
+	<g clip-path="url(#clip611_756)">
+		<path id="Vector" d="M28.5 6C30.15 6 31.5 7.34 31.5 9L31.5 30C31.5 31.65 30.15 33 28.5 33L7.5 33C5.84 33 4.5 31.65 4.5 30L4.5 9C4.5 7.34 5.84 6 7.5 6L28.5 6Z" stroke="#9D5CD0" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round"/>
+		<path id="Vector" d="M24 3L24 9" stroke="#9D5CD0" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
+		<path id="Vector" d="M12 3L12 9" stroke="#9D5CD0" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
+		<path id="Vector" d="M4.5 15L31.5 15" stroke="#000000" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
+	</g>
+</svg>
