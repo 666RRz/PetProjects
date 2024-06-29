@@ -2,7 +2,26 @@ import vk_api
 
 from vk_api.longpoll import VkLongPoll, VkEventType
 import json
-import requests
+import datetime
+
+today = datetime.date.today()
+
+week_day = today.weekday()
+
+days_of_week = {
+    0: "Понедельник",
+    1: "Вторник",
+    2: "Среда",
+    3: "Четверг",
+    4: "Пятница",
+    5: "Суббота",
+    6: "Воскресенье",
+}
+
+
+current_day = days_of_week[week_day]
+delete_day = days_of_week[week_day - 1]
+photo_url = f"{current_day}.jpg"
 
 
 token = ""
@@ -20,6 +39,19 @@ def blasthack(id, text, keyboard=None):
         "messages.send",
         {"user_id": id, "message": text, "random_id": 0, "keyboard": keyboard},
     )
+
+
+def uploadPhoto(photo_url):
+    upload = vk_api.VkUpload(bh)
+    photo = upload.photo_messages(photo_url)
+    owner_id = photo[0]["owner_id"]
+    photo_id = photo[0]["id"]
+    access_key = photo[0]["access_key"]
+    attachment = f"photo{owner_id}_{photo_id}_{access_key}"
+    return attachment
+
+
+uploadPhoto(photo_url)
 
 
 for event in longpoll.listen():
@@ -62,7 +94,7 @@ for event in longpoll.listen():
                 ],
             }
 
-            if message == "Здравствуйте!":
+            if message == "Здравствуйте":
                 blasthack(id, "Привет, я бот!", keyboard)
 
             elif message == "начать":
@@ -75,10 +107,8 @@ for event in longpoll.listen():
                 )
 
             elif message == "получить меню":
-                blasthack(
-                    id,
-                    "Это команда должна отправить  меню на сегодня. Но пока что она находится в разработке. )  ",
-                )
+                bh.method('messages.send', {
+                          'peer_id': id, 'random_id': '0', 'message': 'Ваше фото', 'attachment': attachment})
 
             elif message == "коллега":
                 blasthack(id, "Переключаю чат на моего коллегу, ожидайте!")
