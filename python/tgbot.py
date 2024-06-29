@@ -13,7 +13,7 @@ from aiogram.utils.keyboard import InlineKeyboardBuilder
 from aiogram.utils.callback_answer import CallbackAnswer, CallbackAnswerMiddleware
 
 
-TOKEN = '7161587527:AAFhzFWR2KYI230S4BaAZiIm1MsRZfaJI7E'
+TOKEN = ''
 
 dp = Dispatcher()
 builder = InlineKeyboardBuilder()
