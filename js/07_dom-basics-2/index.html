@@ -9,12 +9,11 @@
 			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
 			crossorigin="anonymous"
 		/>
+		<link rel="shortcut icon" href="./img/to-do-list.png" type="image/x-icon">
 		<title>TODO</title>
-		<script defer src="./todo-app.js"></script>
-		<script defer>
-			document.addEventListener('DOMContentLoaded', function () {
-				createToDoApp(document.getElementById('todo-app'), 'Мои дела', 'my')
-			})
+		<script type="module">
+				import {createToDoApp} from "./todo-app.js";
+				createToDoApp(document.getElementById('todo-app'), 'Мои дела', 'my');
 		</script>
 	</head>
 	<body>

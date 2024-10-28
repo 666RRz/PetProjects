@@ -5,10 +5,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Evklid</title>
-  <link rel="shortcut icon" href="./img/vkladka.svg" type="image/x-icon" />
-  <link rel="stylesheet" href="css/normilize.css" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/media.css" />
+  <link rel="preload" href="./fonts/Montserrat-Regular.woff2" as="font">
+  <link rel="preload" href="./fonts/Montserrat-Medium.woff2" as="font">
+  <link rel="preload" href="./fonts/Montserrat-Bold.woff2" as="font">
+  <link rel="prefetch" href="./fonts/Montserrat-ExtraBold.woff2" as="font">
+  <link rel="prefetch" href="./fonts/Montserrat-SemiBold.woff2" as="font">
+  <link rel="shortcut icon" href="img/vkladka.svg" type="image/x-icon" />
+  <link rel="stylesheet" href="css/normilize-min.css" />
+  <link rel="stylesheet" href="css/style-min.css" />
+  <link rel="stylesheet" href="css/media-min.css" />
   <link rel="shortcut icon" href="./img/favicon.svg" type="svg" />
   <base target="_blank" />
 </head>
@@ -20,9 +25,9 @@
         <div class="logo-box header__logo-box flex">
           <a href="#" class="logo-box__link flex" aria-label="Логотип-ссылка" tabindex="0">
             <picture>
-              <source srcset="./img/1/Logo768.svg" media="(max-width: 980px)" />
-              <source srcset="./img/1/Logo1024.svg" media="(max-width: 1200px)" />
-              <img src="./img/1/Logo.svg" alt="Logo" />
+              <source srcset="img/Logo768.svg" media="(max-width: 980px)" />
+              <source srcset="img/Logo1024.svg" media="(max-width: 1200px)" />
+              <img src="img/Logo.svg" alt="Logo" />
             </picture>
           </a>
         </div>
@@ -162,9 +167,9 @@
           <h2 class="stages-left__h2 heading">Этапы</h2>
           <div class="stages-left__hide">
             <picture>
-              <source srcset="img/1/stages-svg-320.svg" media="(max-width: 550px)" />
-              <source srcset="img/1/stages-svg-768.svg" media="(max-width: 980px)" />
-              <img src="/img/stages-svg-1024.svg" alt="stages-picture" />
+              <source srcset="img/stages-svg-320.svg" media="(max-width: 550px)" />
+              <source srcset="img/stages-svg-768.svg" media="(max-width: 980px)" />
+              <img class="lazyload" src="/img/stages-svg-1024.svg" alt="stages-picture" />
             </picture>
           </div>
           <h3 class="stages-left__h3">Проводим консультацию</h3>
@@ -194,7 +199,7 @@
         </div>
         <picture class="stages-right">
           <source srcset="img/stages-svg-1024.svg" media="(max-width: 1200px)" />
-          <img src="img/stages-right.svg" alt="stages-picture" />
+          <img class="lazyload" src="img/stages-right.svg" alt="stages-picture" />
         </picture>
       </div>
     </section>
@@ -246,8 +251,8 @@
           <div class="logo-box-white" tabindex="0">
             <a class="footer-left__logo-link" href="#">
               <picture>
-                <source srcset="./img/1/logo-white-320.svg" media="(max-width: 550px)" />
-                <img src="./img/1/Logo-white.svg" alt="Логотип-ссылка" />
+                <source srcset="./img/logo-white-320.svg" media="(max-width: 550px)" />
+                <img class="lazyload" data-src="img/Logo-white.svg" src="img/favicon.svg" alt="Логотип-ссылка" />
               </picture>
             </a>
           </div>

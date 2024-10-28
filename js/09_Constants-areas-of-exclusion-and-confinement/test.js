@@ -6,6 +6,107 @@
     return localStorage.getItem("theme");
   }
 
+
+  class Card {
+    constructor(container, cardNumber,) {
+      container.append(this.createElement())
+      this.container = container
+      this.cardNumber = cardNumber
+    }
+    createElement() {
+      const card = document.createElement('li')
+      const cardInside = document.createElement("button");
+      cardInside.classList.add("btn-reset", "list__button");
+      card.classList.add("game__list", "delete");
+      
+      card.append(cardInside)
+      this.cardElement = card
+      return card
+    }
+
+  
+    set cardNumber(value) {           
+      this._cardNumber = value    
+      if(this.cardElement) {
+        this.cardElement.setAttribute('data-number', value)
+      } else {
+      }
+    }
+
+    get cardNumber() {
+      return this._cardNumber
+    }
+
+    set open(value) {
+      this._open = value
+      if(value = true) {
+        this.cardElement.classList.add('back')
+      } else {
+        this.cardElement.classList.remove('back')
+      }
+    }
+
+    get open() {
+      return this._open;
+    }
+
+    set success(value) {
+      this._success = value
+      if(value === true) {
+        setTimeout(() => {
+          this.cardElement.classList.add('clear')
+          this.cardElement.classList.remove('back')
+          this.cardInside.disabled = true
+        }, 1500);
+      } else {
+        return
+      }
+    }
+
+    get success() {
+      return this._success
+    }
+
+  }
+
+  class AmazingCard extends Card {
+    set cardNumber(value) {
+      this._cardNumber = value
+      const cardImages = [
+        'https://cs6.livemaster.ru/storage/51/8d/e9304e78c01418b5ea956d3be36a.jpg',
+        'https://img.freepik.com/free-photo/beautiful-kitten-with-colorful-clouds_23-2150752964.jpg',
+        'https://cs14.pikabu.ru/post_img/big/2023/02/06/10/1675705781113960359.png',
+        
+      // фек 
+
+      'https://oir.mobi/uploads/posts/2024-03/thumbs/1711131200_oir-mobi-8a5x-p-samie-milie-kotiki-123.jpg', 
+
+      //
+        'https:///saponelli.ru/uploads/product/500/578/thumbs/30_IMG_6582-(2)_2021-09-16_17-11-41.JPG',
+        'https://s.zefirka.net/images/2022-06-13/milye-kotiki-zaryazhayut-pozitivom-na-snimkax/milye-kotiki-zaryazhayut-pozitivom-na-snimkax-1.jpg',
+        'https://f8.pmo.ee/GHyvqnWdTXy2WEbGgig8LHNWddU=/685x0/filters:format(webp)/nginx/o/2022/08/03/14736428t1h4a35.jpg', 
+        'https://primamediamts.servicecdn.ru/f/original/3569/3568192.jpg?2d2dfc8d3ae1c3637387b1005054a699',
+        'https://cool.klev.club/uploads/posts/2024-05/cool-klev-club-gsch-p-prikolnie-kartinki-milie-kotiki-na-avu-2.jpg'
+      ]
+      const img = document.createElement('img')
+      
+      img.src = cardImages[value]
+      
+      img.onerror = () => {
+        img.src = './img/default.jpg'
+      }
+
+
+      if(this.cardElement) {
+        this.cardElement.setAttribute('data-number', value)
+      }
+      img.classList.add('li-img')
+      this.cardElement.append(img)
+    }
+  }
+
+ 
+
   function createNumbersArray(count) {
     const arr = [];
     for (let i = 1; i <= count; i++) {
@@ -26,6 +127,7 @@
     }
     return arr;
   }
+
 
   function startGame() {
     const screenWidth = window.innerWidth;
@@ -349,16 +451,12 @@
         let firstCard = null;
         let secondCard = null;
 
-        for (let i = 0; i < cards; i++) {
-          const li = document.createElement("li");
-          const listBtn = document.createElement("button");
-          listBtn.classList.add("btn-reset", "list__button");
-          li.append(listBtn);
-          li.classList.add("game__list", "delete");
-          li.dataset.number = shuffledIds[i];
-          ul.append(li);
+
+        for (let i = 0; i < cards ; i++) {
+            const amazingCard = new AmazingCard(ul, shuffledIds[i])
         }
 
+        
         return ul;
       }
 
@@ -366,6 +464,7 @@
         .querySelector(".game__ul")
         .addEventListener("click", function (event) {
           const clickedElement = event.target;
+          
           if (clickedElement.classList.contains("list__button")) {
             const li = clickedElement.parentElement;
             if (firstCard !== null && secondCard !== null) {
@@ -374,14 +473,14 @@
 
             if (firstCard === null && secondCard === null) {
               li.classList.add("back");
-              clickedElement.textContent = li.dataset.number;
+              // clickedElement.textContent = li.dataset.number;
             }
             if (firstCard == null) {
               firstCard = li.dataset.number;
             } else {
               li.classList.add("back");
               secondCard = li.dataset.number;
-              clickedElement.textContent = li.dataset.number;
+              // clickedElement.textContent = li.dataset.number;
             }
 
             let cards = document.querySelectorAll(".back");
@@ -392,15 +491,15 @@
               // обе карты открыты
               let firstCardNum = firstCard;
               let secondCardNum = secondCard;
-              if (firstCardNum !== secondCardNum) {
+              if (firstCardNum !== secondCardNum) {         
                 setTimeout(() => {
-                  one.classList.remove("back");
-                  one.firstChild.textContent = "";
-                  firstCard = null;
                   two.classList.remove("back");
+                  one.classList.remove("back");
+                  firstCard = null
+                  secondCard = null
+                  one.firstChild.textContent = "";
                   two.firstChild.textContent = "";
-                  secondCard = null;
-                }, 1200);
+                }, 1300);
               }
               if (firstCardNum === secondCardNum) {
                 setTimeout(() => {
@@ -411,7 +510,7 @@
                   two.classList.remove("back", "delete");
                   two.firstChild.disabled = true;
                   two.classList.add("clear");
-                  secondCard = null;
+                  secondCard = null;          
                 }, 2000);
 
                 checkAllCards = false;
