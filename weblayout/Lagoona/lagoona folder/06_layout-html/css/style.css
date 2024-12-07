@@ -1,6 +1,8 @@
 @font-face {
   font-family: "Muller";
-  src: local("Muller-Regular"), url(../fonts/MullerRegular.woff2) format(woff2),
+  src:
+    local("Muller-Regular"),
+    url(../fonts/MullerRegular.woff2) format(woff2),
     url(../fonts/MullerRegular.woff) format(woff);
   font-weight: 400;
   font-style: normal;
@@ -18,7 +20,8 @@
 
 @font-face {
   font-family: "Muller";
-  src: local("Muller-light") url(../fonts/MullerMedium.woff2) format(woff2),
+  src:
+    local("Muller-light") url(../fonts/MullerMedium.woff2) format(woff2),
     url(../fonts/MullerLight.woff) format(woff);
   font-weight: 300;
   font-style: normal;
@@ -421,18 +424,19 @@ p {
 .inside-offers-li {
   flex-wrap: wrap;
   flex-direction: column;
-  padding-top: 40px;
+  padding-top: 8px;
   padding-left: 45px;
 }
 
 .inside-offers-li-3 {
   flex-direction: column;
   padding-left: 45px;
-  padding-top: 212px;
+  padding-top: 55px;
   height: max-content;
+  color: #000;
 }
 
-.sevices-li-fon {
+.services-li-fon {
   display: block;
   background-size: cover;
 }
@@ -470,7 +474,7 @@ p {
       rgba(48, 64, 89, 0.84) 0%,
       rgba(53, 65, 83, 0) 66.67%
     ),
-    url(../img/offer-img1.jpg);
+    url(../img/golova/1.jpg);
   background-repeat: no-repeat;
   width: 573px;
   height: 258px;
@@ -484,7 +488,7 @@ p {
       rgba(48, 64, 89, 0.84) 0%,
       rgba(53, 65, 83, 0) 66.67%
     ),
-    url(../img/offer-img2.jpg);
+    url(../img/golova/2.jpg);
   background-repeat: no-repeat;
   width: 573px;
   height: 258px;
@@ -494,7 +498,7 @@ p {
 
 .img-3 {
   position: relative;
-  background-image: url(../img/offer-img3.jpg);
+  background-image: url(../img/golova/3.jpeg);
   background-repeat: no-repeat;
   min-width: 573px;
   height: 540px;
@@ -538,16 +542,16 @@ p {
 
 .n3 {
   width: 299px;
-  font-size: 60px;
-  font-weight: 700;
-  color: #fff;
+  font-size: 65px;
+  font-weight: 800;
+  color: goldenrod;
   line-height: normal;
 }
 
 .offers-price {
   font-size: 20px;
   font-weight: 400;
-  color: #fff;
+  color: goldenrod;
   opacity: 0.8;
   margin-bottom: 47px;
   min-width: 101.19px;
@@ -1143,7 +1147,8 @@ label {
   width: 653px;
   height: 528px;
   border-radius: 10px;
-  background: url(<path-to-image>),
+  background:
+    url(<path-to-image>),
     lightgray -165px -63.707px / 150.536% 124.131% no-repeat;
 }
 

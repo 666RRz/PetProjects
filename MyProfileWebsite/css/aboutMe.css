@@ -1,0 +1,12 @@
+.aboutMe__header {
+    position: fixed;
+    min-height: 100px;
+    align-items: center;
+    padding: 40px;
+    padding-top: 0;
+    color: #fff;
+}
+
+body {
+    background-image: url("../img/");
+}
